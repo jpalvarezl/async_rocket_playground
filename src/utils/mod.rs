@@ -1,14 +1,16 @@
 use crate::utils::errors::ApiResult;
 use crate::models::backend::safes::SafeInfo;
+use rocket::State;
 
 pub mod errors;
+pub mod context;
 
-pub struct InfoProvider {
-    client: reqwest::Client
+pub struct InfoProvider<'a> {
+    client: State<'a, reqwest::Client>
 }
 
-impl InfoProvider {
-    pub fn from(client: reqwest::Client) -> Self {
+impl<'a> InfoProvider<'a> {
+    pub fn from(client: State<'a, reqwest::Client>) -> Self {
         InfoProvider { client }
     }
 
