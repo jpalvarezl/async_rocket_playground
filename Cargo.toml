@@ -8,6 +8,8 @@ edition = "2018"
 
 [dependencies]
 
+futures = "0.3"
+
 rocket = { git = "https://github.com/SergioBenitez/Rocket", rev = "4f3511786cb8b6540124b867591c7c5a6933409e" }
 rocket_codegen = { git = "https://github.com/SergioBenitez/Rocket", rev = "4f3511786cb8b6540124b867591c7c5a6933409e" }
 

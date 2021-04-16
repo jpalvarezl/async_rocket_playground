@@ -6,6 +6,7 @@ extern crate rocket;
 #[macro_use]
 extern crate rocket_contrib;
 
+mod models;
 mod routes;
 mod utils;
 

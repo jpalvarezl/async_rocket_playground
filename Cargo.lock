@@ -27,6 +27,7 @@ name = "async_rocket_playground"
 version = "0.1.0"
 dependencies = [
  "env_logger",
+ "futures",
  "log",
  "r2d2",
  "redis",
