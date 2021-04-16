@@ -8,6 +8,7 @@ extern crate rocket_contrib;
 
 mod models;
 mod routes;
+mod service;
 mod utils;
 
 use crate::routes::*;
