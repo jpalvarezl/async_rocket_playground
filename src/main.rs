@@ -1,5 +1,7 @@
 #![feature(async_closure, proc_macro_hygiene, decl_macro, option_result_contains)]
 
+extern crate log;
+
 #[macro_use]
 extern crate rocket;
 
@@ -16,6 +18,8 @@ use std::time::Duration;
 
 #[launch]
 fn rocket() -> _ {
+    env_logger::init();
+
     let client = reqwest::Client::builder()
         .connect_timeout(Duration::from_millis(20000))
         .build()
